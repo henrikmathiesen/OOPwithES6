@@ -1,0 +1,22 @@
+{
+  "name": "oop-with-es6",
+  "version": "1.0.0",
+  "description": "Object-oriented Programming in JavaScript - ES6",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henrikmathiesen/OOPwithES6.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/henrikmathiesen/OOPwithES6/issues"
+  },
+  "homepage": "https://github.com/henrikmathiesen/OOPwithES6#readme",
+  "devDependencies": {
+    "http-server": "^0.9.0"
+  }
+}
