@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "http-server -p 1337",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify app/js/app.js -o bld/app.js"
   },
   "repository": {
     "type": "git",
@@ -18,8 +19,7 @@
   },
   "homepage": "https://github.com/henrikmathiesen/OOPwithES6#readme",
   "devDependencies": {
-    "browserify": "^13.1.0",
-    "http-server": "^0.9.0",
-    "watchify": "^3.7.0"
+    "babelify": "^7.3.0",
+    "http-server": "^0.9.0"
   }
 }
