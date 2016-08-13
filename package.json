@@ -20,6 +20,8 @@
   "homepage": "https://github.com/henrikmathiesen/OOPwithES6#readme",
   "devDependencies": {
     "babelify": "^7.3.0",
-    "http-server": "^0.9.0"
+    "browserify": "^13.1.0",
+    "http-server": "^0.9.0",
+    "watchify": "^3.7.0"
   }
 }
