@@ -10,6 +10,7 @@
     "watchify-babel-sourcemap": "watchify app/js/app.js -t babelify -d -o bld/bundle.js",
     "browserify-babel-no-sourcemap": "browserify app/js/app.js -t babelify -o bld/bundle.js",
     "uglifyjs": "uglifyjs bld/bundle.js -o bld/bundle.js",
+    "eslint": "eslint app/js/**/*.js",
     "less-sourcemap": "lessc --source-map-map-inline app/less/app.less bld/app.css",
     "css-autoprefix": "postcss -u autoprefixer --autoprefixer.browsers \"last 3 versions\" -r bld/app.css",
     "watch-less-sourcemap-css-autoprefix": "onchange \"app/less/**/*.less\" -- npm run less-sourcemap && npm run css-autoprefix",
@@ -20,6 +21,28 @@
       "es2015"
     ]
   },
+   "eslintConfig": {
+    "extends": "eslint:recommended",
+    "env": {
+      "browser": true,
+      "node": true,
+      "jquery": true,
+      "commonjs": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module"
+    },
+    "globals": {
+      "jQuery": true,
+      "$": true
+    },
+    "rules": {
+      "no-console": 0,
+      "no-debugger": 0
+    }
+  },
+  "eslint-rules": "http://eslint.org/docs/rules/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/henrikmathiesen/OOPwithES6.git"
@@ -36,6 +59,7 @@
     "babelify": "^7.3.0",
     "browserify": "^13.1.0",
     "concurrently": "^2.2.0",
+    "eslint": "^3.3.1",
     "http-server": "^0.9.0",
     "less": "^2.7.1",
     "less-plugin-clean-css": "^1.5.1",
