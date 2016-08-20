@@ -6,12 +6,11 @@
   "scripts": {
     "start": "concurrently \"npm run jswatch\" \"npm run serve\" ",
     "serve": "http-server -p 1337",
-    
-    
-    "browserify-babel-sourcemap":       "browserify app/js/app.js -t babelify -d -o bld/bundle.js",
-    "watchify-babel-sourcemap":         "watchify app/js/app.js -t babelify -d -o bld/bundle.js",
-    "browserify-babel-no-sourcemap":    "browserify app/js/app.js -t babelify -o bld/bundle.js",
-    "uglifyjs":                         "uglifyjs bld/bundle.js -o bld/bundle.js"
+    "browserify-babel-sourcemap": "browserify app/js/app.js -t babelify -d -o bld/bundle.js",
+    "watchify-babel-sourcemap": "watchify app/js/app.js -t babelify -d -o bld/bundle.js",
+    "browserify-babel-no-sourcemap": "browserify app/js/app.js -t babelify -o bld/bundle.js",
+    "uglifyjs": "uglifyjs bld/bundle.js -o bld/bundle.js",
+    "less-sourcemap": "lessc --source-map-map-inline app/less/app.less bld/app.css"
   },
   "babel": {
     "presets": [
@@ -34,6 +33,7 @@
     "browserify": "^13.1.0",
     "concurrently": "^2.2.0",
     "http-server": "^0.9.0",
+    "less": "^2.7.1",
     "uglify-js": "^2.7.0",
     "watchify": "^3.7.0"
   }
