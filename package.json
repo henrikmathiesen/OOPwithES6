@@ -11,7 +11,8 @@
     "browserify-babel-no-sourcemap": "browserify app/js/app.js -t babelify -o bld/bundle.js",
     "uglifyjs": "uglifyjs bld/bundle.js -o bld/bundle.js",
     "less-sourcemap": "lessc --source-map-map-inline app/less/app.less bld/app.css",
-    "watch-less-sourcemap": "onchange \"app/less/**/*.less\" -- npm run less-sourcemap "
+    "watch-less-sourcemap": "onchange \"app/less/**/*.less\" -- npm run less-sourcemap",
+    "less-no-sourcemap-minify": "lessc --clean-css app/less/app.less bld/app.css"
   },
   "babel": {
     "presets": [
@@ -35,6 +36,7 @@
     "concurrently": "^2.2.0",
     "http-server": "^0.9.0",
     "less": "^2.7.1",
+    "less-plugin-clean-css": "^1.5.1",
     "onchange": "^2.5.0",
     "uglify-js": "^2.7.0",
     "watchify": "^3.7.0"
