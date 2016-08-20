@@ -11,6 +11,7 @@
     "browserify-babel-no-sourcemap": "browserify app/js/app.js -t babelify -o bld/bundle.js",
     "uglifyjs": "uglifyjs bld/bundle.js -o bld/bundle.js",
     "eslint": "eslint app/js/**/*.js",
+    "eslint-watch": "onchange \"app/js/**/*.js\" -- npm run eslint",
     "less-sourcemap": "lessc --source-map-map-inline app/less/app.less bld/app.css",
     "css-autoprefix": "postcss -u autoprefixer --autoprefixer.browsers \"last 3 versions\" -r bld/app.css",
     "watch-less-sourcemap-css-autoprefix": "onchange \"app/less/**/*.less\" -- npm run less-sourcemap && npm run css-autoprefix",
