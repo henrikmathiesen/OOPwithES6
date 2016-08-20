@@ -6,9 +6,12 @@
   "scripts": {
     "start": "concurrently \"npm run jswatch\" \"npm run serve\" ",
     "serve": "http-server -p 1337",
-    "jsdev": "browserify app/js/app.js -t babelify --debug --outfile bld/bundle.js",
-    "jswatch": "watchify app/js/app.js -t babelify --debug --outfile bld/bundle.js",
-    "jsbuild": "browserify app/js/app.js -t babelify --outfile bld/bundle.js && uglifyjs bld/bundle.js --output bld/bundle.js"
+    
+    
+    "browserify-babel-sourcemap":       "browserify app/js/app.js -t babelify -d -o bld/bundle.js",
+    "watchify-babel-sourcemap":         "watchify app/js/app.js -t babelify -d -o bld/bundle.js",
+    "browserify-babel-no-sourcemap":    "browserify app/js/app.js -t babelify -o bld/bundle.js",
+    "uglifyjs":                         "uglifyjs bld/bundle.js -o bld/bundle.js"
   },
   "babel": {
     "presets": [
