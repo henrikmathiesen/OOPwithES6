@@ -4,6 +4,6 @@ export default class TestClass {
     }
 
     sayHi(){
-        console.log("Hi there");
+        console.log("Hi there!!!!!!!");
     }
 }

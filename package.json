@@ -4,10 +4,10 @@
   "description": "Object-oriented Programming in JavaScript - ES6",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"npm run eslint-watch\" \"npm run watchify-babel-sourcemap\" \"watch-less-sourcemap-css-autoprefix\" \"npm run serve\" ",
-    "dev": "npm run eslint && npm run browserify-babel-sourcemap && npm run less-sourcemap && npm run css-autoprefix",
-    "bld": "npm run browserify-babel-no-sourcemap && npm run uglifyjs && npm run less-no-sourcemap-minify && npm run css-autoprefix",
-    "":"_________________________________________________________________________________________________________________________",
+    "start": "npm run dev && concurrently \"npm run eslint-watch\" \"npm run watchify-babel-sourcemap\" \"npm run watch-less-sourcemap-css-autoprefix\" \"npm run serve\"",
+    "dev": "npm run eslint && npm run browserify-babel-sourcemap && npm run less-sourcemap-css-autoprefix",
+    "bld": "npm run eslint && npm run browserify-babel-no-sourcemap && npm run uglifyjs && npm run less-no-sourcemap-css-autoprefix-minify",
+    "":"_______________________________________________________________________________________________________________________________________________",
     "serve": "http-server -p 1337",
     "browserify-babel-sourcemap": "browserify app/js/app.js -t babelify -d -o bld/bundle.js",
     "watchify-babel-sourcemap": "watchify app/js/app.js -t babelify -d -o bld/bundle.js",
@@ -15,10 +15,9 @@
     "uglifyjs": "uglifyjs bld/bundle.js -o bld/bundle.js",
     "eslint": "eslint app/js/**/*.js",
     "eslint-watch": "onchange \"app/js/**/*.js\" -- npm run eslint",
-    "less-sourcemap": "lessc --source-map-map-inline app/less/app.less bld/app.css",
-    "css-autoprefix": "postcss -u autoprefixer --autoprefixer.browsers \"last 3 versions\" -r bld/app.css",
-    "watch-less-sourcemap-css-autoprefix": "onchange \"app/less/**/*.less\" -- npm run less-sourcemap && npm run css-autoprefix",
-    "less-no-sourcemap-minify": "lessc --clean-css app/less/app.less bld/app.css"
+    "less-sourcemap-css-autoprefix": "lessc --source-map-map-inline app/less/app.less bld/app.css && postcss -u autoprefixer --autoprefixer.browsers \"last 3 versions\" -r bld/app.css",
+    "less-no-sourcemap-css-autoprefix-minify": "lessc --clean-css app/less/app.less bld/app.css && postcss -u autoprefixer --autoprefixer.browsers \"last 3 versions\" -r bld/app.css",
+    "watch-less-sourcemap-css-autoprefix": "onchange \"app/less/**/*.less\" -- npm run less-sourcemap-css-autoprefix"
   },
   "babel": {
     "presets": [
