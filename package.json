@@ -4,7 +4,9 @@
   "description": "Object-oriented Programming in JavaScript - ES6",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"npm run jswatch\" \"npm run serve\" ",
+    "start": "concurrently \"npm run eslint-watch\" \"npm run watchify-babel-sourcemap\" \"watch-less-sourcemap-css-autoprefix\" \"npm run serve\" ",
+    "dev": "npm run eslint && npm run browserify-babel-sourcemap && npm run less-sourcemap && npm run css-autoprefix",
+    "bld": "npm run browserify-babel-no-sourcemap && npm run uglifyjs && npm run less-no-sourcemap-minify && npm run css-autoprefix",
     "":"_________________________________________________________________________________________________________________________",
     "serve": "http-server -p 1337",
     "browserify-babel-sourcemap": "browserify app/js/app.js -t babelify -d -o bld/bundle.js",
