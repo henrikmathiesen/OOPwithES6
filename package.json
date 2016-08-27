@@ -7,7 +7,7 @@
     "start": "npm run dev && concurrently \"npm run eslint-watch\" \"npm run watchify-babel-sourcemap\" \"npm run watch-less-sourcemap-css-autoprefix\" \"npm run serve\"",
     "dev": "npm run eslint && npm run browserify-babel-sourcemap && npm run less-sourcemap-css-autoprefix",
     "bld": "npm run eslint && npm run browserify-babel-no-sourcemap && npm run uglifyjs && npm run less-no-sourcemap-css-autoprefix-minify",
-    "":"_______________________________________________________________________________________________________________________________________________",
+    "": "_______________________________________________________________________________________________________________________________________________",
     "serve": "http-server -p 1337",
     "browserify-babel-sourcemap": "browserify app/js/app.js -t babelify -d -o bld/bundle.js",
     "watchify-babel-sourcemap": "watchify app/js/app.js -t babelify -d -o bld/bundle.js",
@@ -24,7 +24,7 @@
       "es2015"
     ]
   },
-   "eslintConfig": {
+  "eslintConfig": {
     "extends": "eslint:recommended",
     "env": {
       "browser": true,
@@ -70,5 +70,8 @@
     "postcss-cli": "^2.5.2",
     "uglify-js": "^2.7.0",
     "watchify": "^3.7.0"
+  },
+  "dependencies": {
+    "normalize.less": "^1.0.0"
   }
 }

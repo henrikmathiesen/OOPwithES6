@@ -1,0 +1,44 @@
+body {
+    background-color: @oo-color-violet;
+    color: @oo-color-pearl;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: @oo-gutter-gutter-md;
+
+    @media only screen and (min-width:@oo-ipad-landscape-width) {
+        padding: 60px;
+    }
+}
+
+h1,h2,h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    color:@oo-color-yellow-orange;
+}
+
+h1 {
+    margin-top: 0;
+
+    @media only screen and (min-width:@oo-ipad-landscape-width) {
+        font-size: 100px;
+        margin-bottom: @oo-gutter-gutter-lg;
+    }
+}
+
+a, a:visited, a:hover, a:active {
+    position: relative;
+    color: @oo-color-mint;
+    text-decoration: none;
+    border-bottom: 1px solid fade(@oo-color-yellow-orange, 60%);
+    transition: border-bottom 0.5s ease;
+}
+
+a:hover {
+    border-bottom: 1px solid @oo-color-yellow-orange;
+}
+
+a:active {
+  top: 1px;
+}
+
+li + li {
+    margin-top: @oo-gutter-gutter-xs
+}
