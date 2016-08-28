@@ -26,6 +26,14 @@
         <li><a href="https://auth0.com/blog/javascript-module-systems-showdown/">Javascript Module-systems Showdown</a></li>
         <li><a href="http://egorsmirnov.me/2015/05/25/browserify-babelify-and-es6.html">Browserify and Babel</a></li>
     </ul>
+    <h4>Source Maps</h4>
+    <p>
+        We also learned a bit about <span class="oo-text-with-title" title="A connection between the built file and the source files, for debuggning">source maps</span> 
+        in depth in this little endeavour. A sourcemap can be in a .map file (which is downloaded by browsers developer tools) 
+        or embedded in the built js file. The sourcemap can be either a reference to the source code files or the actual source code files embedded into it. 
+        The problem with the first alternative is that the browser needs access to the source code file, not optimal. The second approach is much better.
+        I prefer the to embedd the sourcemap (with source files included) into the built js file, so everything is in one place - obviously only in development mode.
+    </p>
     <h4>Browserify ES5</h4>
     <p>
         Lets test Browserify's transformation of CommonJS to regular JavaScript, using just ES5.
