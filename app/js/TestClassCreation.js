@@ -8,6 +8,11 @@ export default class TestClassCreation {
         this.name = name;
     }
 
+    // INSTANCE METHOD
+    fly(){
+        console.log("Drone: " + this.id + " is flying");
+    }    
+
 }
 
 // STATIC PROPERTIE, on the class itself (we set it like this, outside the class)

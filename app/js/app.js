@@ -14,3 +14,6 @@ console.log("testClassCreation id: " + testClassCreation.id + " testClassCreatio
 
 console.log(testClassCreation.maxHeight);                               // undefined, since its a class property, not an instance property
 console.log(TestClassCreation.maxHeight);                               // 2000
+
+testClassCreation.fly();                                                // calling instance methods
+testClassCreationToo.fly();
