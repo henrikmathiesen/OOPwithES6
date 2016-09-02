@@ -8,6 +8,11 @@ export default class TestClassCreation {
         this.name = name;
     }
 
+    // STATIC METHOD - remember that instance properties, like this.id and this.name, dont exist in static methods (they belong to the instance, not the class)
+    static getCompany(){
+        return "Henry AB";
+    }
+
     // INSTANCE METHOD
     fly(){
         console.log("Drone: " + this.id + " is flying");

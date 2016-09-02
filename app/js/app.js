@@ -10,10 +10,12 @@ console.log(testClassCreation['name']);                                 // Henry
 
 let testClassCreationToo = new TestClassCreation("335", "Twirl");
 
-console.log("testClassCreation id: " + testClassCreation.id + " testClassCreationToo id: " + testClassCreationToo.id);
+console.log("testClassCreation id: " + testClassCreation.id + " testClassCreationToo id: " + testClassCreationToo.id);          // logging instance properties
 
-console.log(testClassCreation.maxHeight);                               // undefined, since its a class property, not an instance property
-console.log(TestClassCreation.maxHeight);                               // 2000
+console.log(testClassCreation.maxHeight);                                                                                       // undefined, since its a class property, not an instance property
+console.log(TestClassCreation.maxHeight);                                                                                       // 2000
 
-testClassCreation.fly();                                                // calling instance methods
+testClassCreation.fly();                                                                                                        // calling instance methods
 testClassCreationToo.fly();
+
+console.log(TestClassCreation.getCompany());                                                                                    // calling static method
