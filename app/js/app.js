@@ -1,6 +1,6 @@
 import TestClassCreation from './TestClassCreation';
 
-let testClassCreation = new TestClassCreation("123", "Henry");
+let testClassCreation = new TestClassCreation("123", "Henry", "private info 1");
 
 console.log(typeof TestClassCreation);                                  // function
 console.log(typeof testClassCreation);                                  // object
@@ -8,7 +8,7 @@ console.log(testClassCreation instanceof TestClassCreation);            // true
 console.log(testClassCreation.id);                                      // 123
 console.log(testClassCreation['name']);                                 // Henry
 
-let testClassCreationToo = new TestClassCreation("335", "Twirl");
+let testClassCreationToo = new TestClassCreation("335", "Twirl", "private info 2");
 
 console.log("testClassCreation id: " + testClassCreation.id + " testClassCreationToo id: " + testClassCreationToo.id);          // logging instance properties
 
@@ -19,3 +19,9 @@ testClassCreation.fly();                                                        
 testClassCreationToo.fly();
 
 console.log(TestClassCreation.getCompany());                                                                                    // calling static method
+
+console.log(testClassCreation.privateInfo);
+
+testClassCreation.privateInfo = "private info x";
+
+console.log(testClassCreation.privateInfo);
