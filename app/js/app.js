@@ -6,4 +6,8 @@ console.log(typeof TestClassCreation);                                  // funct
 console.log(typeof testClassCreation);                                  // object
 console.log(testClassCreation instanceof TestClassCreation);            // true
 console.log(testClassCreation.id);                                      // 123
-console.log(testClassCreation.name);                                    // Henry
+console.log(testClassCreation['name']);                                 // Henry
+
+let testClassCreationToo = new TestClassCreation("335", "Twirl");
+
+console.log("testClassCreation id: " + testClassCreation.id + " testClassCreationToo id: " + testClassCreationToo.id);
