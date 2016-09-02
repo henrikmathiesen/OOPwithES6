@@ -20,8 +20,8 @@ testClassCreationToo.fly();
 
 console.log(TestClassCreation.getCompany());                                                                                    // calling static method
 
-console.log(testClassCreation.privateInfo);
+console.log(testClassCreation.privateInfo);                                                                                     // calling getter
 
-testClassCreation.privateInfo = "private info x";
+testClassCreation.privateInfo = "private info x";                                                                               // calling setter
 
-console.log(testClassCreation.privateInfo);
+console.log(testClassCreation.privateInfo);                                                                                     // calling getter again, set info reflected
