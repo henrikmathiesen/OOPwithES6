@@ -11,3 +11,6 @@ console.log(testClassCreation['name']);                                 // Henry
 let testClassCreationToo = new TestClassCreation("335", "Twirl");
 
 console.log("testClassCreation id: " + testClassCreation.id + " testClassCreationToo id: " + testClassCreationToo.id);
+
+console.log(testClassCreation.maxHeight);                               // undefined, since its a class property, not an instance property
+console.log(TestClassCreation.maxHeight);                               // 2000

@@ -10,5 +10,5 @@ export default class TestClassCreation {
 
 }
 
-// STATIC PROPERTIE, on the class itself
+// STATIC PROPERTIE, on the class itself (we set it like this, outside the class)
 TestClassCreation.maxHeight = 2000;
