@@ -21,7 +21,7 @@ export default class TestClassCreation {
         console.log("Drone: " + this.id + " is flying");
     }
 
-    // GETTERS AND SETTERS
+    // GETTERS AND SETTERS (not called like methods)
 
     get privateInfo() {
         return this._private + " TEMPORARY";
