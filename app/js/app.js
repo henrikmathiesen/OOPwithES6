@@ -1,4 +1,6 @@
 import TestClassCreation from './TestClassCreation';
+import Car from './Car';
+import Drone from './Drone';
 
 let testClassCreation = new TestClassCreation("123", "Henry", "private info 1");
 
@@ -25,3 +27,12 @@ console.log(testClassCreation.privateInfo);                                     
 testClassCreation.privateInfo = "private info x";                                                                               // calling setter
 
 console.log(testClassCreation.privateInfo);                                                                                     // calling getter again, set info reflected
+
+
+// Inheritence
+
+let car01 = new Car();
+let drone01 = new Drone();
+
+console.log(car01 instanceof Car);
+console.log(drone01 instanceof Drone);
