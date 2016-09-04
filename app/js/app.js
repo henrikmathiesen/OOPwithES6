@@ -1,6 +1,8 @@
 import TestClassCreation from './TestClassCreation';
+import { Multiple01, Multiple02 } from './exportMultiple.js';
 import Car from './Car';
 import Drone from './Drone';
+
 
 let testClassCreation = new TestClassCreation("123", "Henry", "private info 1");
 
@@ -29,10 +31,16 @@ testClassCreation.privateInfo = "private info x";                               
 console.log(testClassCreation.privateInfo);                                                                                     // calling getter again, set info reflected
 
 
-// Inheritence
+// TEST EXPORT/IMPORT MULTIPLE CLASSES (not really best practice but I want to test it)
+
+let multiple01 = new Multiple01();
+let multiple02 = new Multiple02();
+
+// INHERITENCE
 
 let car01 = new Car();
 let drone01 = new Drone();
 
-console.log(car01 instanceof Car);
-console.log(drone01 instanceof Drone);
+console.log(car01 instanceof Car);                                                                                              // true
+console.log(drone01 instanceof Drone);                                                                                          // true
+                                                                                                                                // car01 and drone01 is also an instance of vehicle
