@@ -1,5 +1,5 @@
 import TestClassCreation from './TestClassCreation';
-import { Multiple01, Multiple02 } from './exportMultiple.js';
+import { Multiple01, Multiple02 } from './exportMultiple';
 import Car from './Car';
 import Drone from './Drone';
 
