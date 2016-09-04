@@ -38,9 +38,14 @@ let multiple02 = new Multiple02();
 
 // INHERITENCE
 
-let car01 = new Car();
-let drone01 = new Drone();
+let car01 = new Car();                                                                                                          // This is executing the constructor in vehicle, its base class
+let drone01 = new Drone();                                                                                                      // Same here, of course
+                                                                                                                                // The constructor in Car is also executed, when having a constructor in a derived class then it MUST call parent constructor 
+                                                                                                                                // with super(), even if parent class does not have one in code (classes always have constructors behind the scenes)
 
 console.log(car01 instanceof Car);                                                                                              // true
 console.log(drone01 instanceof Drone);                                                                                          // true
-                                                                                                                                // car01 and drone01 is also an instance of vehicle
+                                                                                                                                // car01 and drone01 is also an instance of vehicle, and they are instance of Object
+
+let car02 = new Car("B52");                                                                                                     // Passing argument to constructor in Car which passes it to constructor in vehicle
+console.log(car02.licenseNumber);
