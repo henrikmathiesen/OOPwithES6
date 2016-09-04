@@ -49,3 +49,5 @@ console.log(drone01 instanceof Drone);                                          
 
 let car02 = new Car("B52");                                                                                                     // Passing argument to constructor in Car which passes it to constructor in vehicle
 console.log(car02.licenseNumber);
+
+console.log(car02.gpsEnabled);                                                                                                  // Inherited property from vehicle, overwritten in Car (do it after super() call)
