@@ -41,7 +41,7 @@ let multiple02 = new Multiple02();
 let car01 = new Car();                                                                                                          // This is executing the constructor in vehicle, its base class
 let drone01 = new Drone();                                                                                                      // Same here, of course
                                                                                                                                 // The constructor in Car is also executed, when having a constructor in a derived class then it MUST call parent constructor 
-                                                                                                                                // with super(), even if parent class does not have one in code (classes always have constructors behind the scenes)
+                                                                                                                                // with super() (first line), even if parent class does not have one in code (classes always have constructors behind the scenes)
 
 console.log(car01 instanceof Car);                                                                                              // true
 console.log(drone01 instanceof Drone);                                                                                          // true
@@ -51,3 +51,12 @@ let car02 = new Car("B52");                                                     
 console.log(car02.licenseNumber);
 
 console.log(car02.gpsEnabled);                                                                                                  // Inherited property from vehicle, overwritten in Car (do it after super() call)
+
+car02.start();                                                                                                                  // Call an inherited method
+car02.stop();                                                                                                                   // Call overwritten inherited method
+                                                                                                                                // user super.stop(); in Car's stop() to ALSO call vehicle's stop() 
+                                                                                                                                // In a method it is ok to call super() after other logic
+
+Car.getCompanyName();                                                                                                           // Static methods can also be inherited
+                                                                                                                                // Can also be overwritten
+                                                                                                                                // Can also call super() in overide static method

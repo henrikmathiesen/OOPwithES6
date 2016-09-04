@@ -8,4 +8,9 @@ export default class Car extends Vehicle {
         console.log("Constructing a Car");
     }
 
+    stop(){
+        super.stop();
+        console.log("BREAK");
+    }
+
 }

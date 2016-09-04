@@ -9,4 +9,16 @@ export default class Vehicle {
 
     }
 
+    start() {
+        console.log("Starting Vehicle");
+    }
+
+    stop() {
+        console.log("STOPPING");
+    }
+
+    static getCompanyName() {
+        console.log("My Company");
+    }
+
 }
