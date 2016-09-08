@@ -7,7 +7,7 @@ export default class TestClassCreation {
         this.id = id;
         this.name = name;
 
-        // private by convention
+        // private by convention (but still accessible)
         this._private = privateInfo;
     }
 
