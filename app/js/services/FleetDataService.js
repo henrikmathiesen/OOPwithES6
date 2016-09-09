@@ -8,8 +8,8 @@ export default class FleetDataService {
         this.drones = [];
     }
 
-    loadData() {
-        
+    loadData(fleet) {
+
     }
 
 }
