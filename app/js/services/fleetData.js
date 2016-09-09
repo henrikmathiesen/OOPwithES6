@@ -17,14 +17,12 @@ export let fleet = [
         license: 'ABF202',
         type: 'car',
         model: 'Volvo V70',
-        miles: '1135',
-        base: 'New York'
+        miles: '1135'
     },
     {
         license: 'ABY100',
         type: 'car',
         model: 'Mercedes',
-        miles: '5529',
-        base: 'Madrid'
+        miles: '5529'
     }
 ];
