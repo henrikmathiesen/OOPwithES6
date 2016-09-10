@@ -68,3 +68,5 @@ Car.getCompanyName();                                                           
 
 let dataService = new FleetDataService();
 dataService.loadData(fleet);
+console.log(dataService.cars);
+console.log(dataService.drones);
