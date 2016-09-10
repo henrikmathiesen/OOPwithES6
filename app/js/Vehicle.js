@@ -1,9 +1,10 @@
 export default class Vehicle {
 
-    constructor(licenseNumber) {
+    constructor(license, model) {
 
         this.gpsEnabled = true;
-        this.licenseNumber = licenseNumber;
+        this.license = license;
+        this.model = model;
 
         console.log("Constructing a Vehicle");
 

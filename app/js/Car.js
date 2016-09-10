@@ -2,8 +2,9 @@ import Vehicle from './Vehicle';
 
 export default class Car extends Vehicle {
     
-    constructor(licenseNumber){
-        super(licenseNumber);
+    constructor(miles, license, model){
+        super(license, model);
+        this.miles = miles;
         this.gpsEnabled = false;
         console.log("Constructing a Car");
     }
