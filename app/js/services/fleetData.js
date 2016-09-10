@@ -14,7 +14,7 @@ export let fleet = [
         base: 'Chicago'
     },
     {
-        license: 'ABF202',
+        license: 'ABZ202',
         type: 'car',
         model: 'Volvo V70',
         miles: '1135'

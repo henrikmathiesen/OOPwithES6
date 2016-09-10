@@ -71,3 +71,5 @@ dataService.loadData(fleet);
 console.log(dataService.cars);
 console.log(dataService.drones);
 console.log(dataService.errors);
+console.log(dataService.getCarByLicense("ABF202"));
+console.log(dataService.getCarsSorted());

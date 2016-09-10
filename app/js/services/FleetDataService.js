@@ -35,7 +35,7 @@ export default class FleetDataService {
         try {
             return new Drone(drone.airTimeHours, drone.base, drone.model, drone.license);
         }
-        catch(e) {
+        catch (e) {
             this.errors.push(new DataError("Error loading drone", drone));
         }
         return null;
@@ -45,10 +45,33 @@ export default class FleetDataService {
         try {
             return new Car(car.miles, car.license, car.model);
         }
-        catch(e) {
+        catch (e) {
             this.errors.push(new DataError("Error loading car", car));
         }
         return null;
+    }
+
+    getCarByLicense(license) {
+        let car = this.cars.find(function(car) {
+            return car.license === license;
+        });
+
+        return car;
+    }
+
+    getCarsSorted(){
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+        var sortedCars = this.cars.sort(function(car1, car2){
+            if(car1.license < car2.license) {
+                return -1;
+            }
+            if(car1.license > car2.license) {
+                return 1;
+            }
+            return 0;
+        });
+
+        return sortedCars;
     }
 
 }
