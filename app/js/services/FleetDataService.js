@@ -52,26 +52,32 @@ export default class FleetDataService {
     }
 
     getCarByLicense(license) {
-        let car = this.cars.find(function(car) {
+        let car = this.cars.find(function (car) {
             return car.license === license;
         });
 
         return car;
     }
 
-    getCarsSorted(){
+    getCarsSorted() {
         // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
-        var sortedCars = this.cars.sort(function(car1, car2){
-            if(car1.license < car2.license) {
+        var sortedCars = this.cars.sort(function (car1, car2) {
+            if (car1.license < car2.license) {
                 return -1;
             }
-            if(car1.license > car2.license) {
+            if (car1.license > car2.license) {
                 return 1;
             }
             return 0;
         });
 
         return sortedCars;
+    }
+
+    getCarsFilteredByModel(filter) {
+        filter = filter.toLowerCase();
+        var filteredCars = this.cars.filter(function(car){ return car.model.toLowerCase().indexOf(filter) > -1 });
+        return filteredCars;
     }
 
 }
