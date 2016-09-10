@@ -24,7 +24,7 @@ export default class FleetDataService {
                     break;
                 }
                 default: {
-                    let e = new Error("Invalid type", data);
+                    let e = new DataError("Invalid type", data);
                     this.errors.push(e);
                 }
             }
@@ -36,7 +36,7 @@ export default class FleetDataService {
             return new Drone(drone.airTimeHours, drone.base, drone.model, drone.license);
         }
         catch(e) {
-            this.errors.push(new Error("Error loading drone", drone));
+            this.errors.push(new DataError("Error loading drone", drone));
         }
         return null;
     }
@@ -46,7 +46,7 @@ export default class FleetDataService {
             return new Car(car.miles, car.license, car.model);
         }
         catch(e) {
-            this.errors.push(new Error("Error loading car", car));
+            this.errors.push(new DataError("Error loading car", car));
         }
         return null;
     }

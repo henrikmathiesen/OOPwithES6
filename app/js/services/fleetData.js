@@ -24,5 +24,12 @@ export let fleet = [
         type: 'car',
         model: 'Mercedes',
         miles: '5529'
+    },
+    {
+        license: 'ABC123',
+        type: 'unknown',
+        model: 'Amazon 1250',
+        airTimeHours: '6050',
+        base: 'New York'
     }
 ];
