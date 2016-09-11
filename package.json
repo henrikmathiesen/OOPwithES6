@@ -74,6 +74,7 @@
     "watchify": "^3.7.0"
   },
   "dependencies": {
+    "jquery": "^3.1.0",
     "normalize.less": "^1.0.0"
   }
 }
