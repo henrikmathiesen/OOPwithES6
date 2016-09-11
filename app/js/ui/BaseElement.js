@@ -2,16 +2,22 @@ import $ from 'jquery';
 
 export default class BaseElement {
 
-    constructor(){
+    constructor() {
         this.element = null; // jQuery object
     }
 
-    createElement(selector){
-        this.element = $(selector);
+    appendToElement(element) { 
+        element = $(element);
+        element.append(this.element);
     }
 
-    getElementString(){
+    createElement() {
+        let s = this.getElementString();
+        this.element = $(s);
+    }
 
+    getElementString() {
+        throw "Please override getElementString() in BaseElement";
     }
 
 }
