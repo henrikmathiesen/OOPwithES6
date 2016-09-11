@@ -4,7 +4,6 @@ import Car from './Car';
 import Drone from './Drone';
 import {fleet} from './services/fleetData';
 import FleetDataService from './services/FleetDataService';
-import $ from 'jquery';
 
 
 let testClassCreation = new TestClassCreation("123", "Henry", "private info 1");
