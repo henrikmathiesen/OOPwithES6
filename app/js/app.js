@@ -80,8 +80,10 @@ console.log(dataService.getCarsFilteredByModel("volvo"));
 
 // USING THE UI ELEMENTS
 
-let btn = new ButtonElement("Hello world!");
-btn.appendToElement('#oo-app');
+const appElement = '#oo-app';
 
-let img = new ImageElement('http://loremflickr.com/800/600');
-img.appendToElement('#oo-app'); 
+let btn = new ButtonElement("Hello world!");
+btn.appendToElement(appElement);
+
+let img = new ImageElement('app/img/cat.jpg', 'oo-display-block');
+img.appendToElement(appElement); 
