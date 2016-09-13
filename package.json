@@ -39,7 +39,8 @@
     },
     "globals": {
       "jQuery": true,
-      "$": true
+      "$": true,
+      "componentHandler": true
     },
     "rules": {
       "no-console": 0,

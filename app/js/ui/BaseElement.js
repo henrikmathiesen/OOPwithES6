@@ -21,4 +21,9 @@ export default class BaseElement {
         throw "Please override getElementString() in BaseElement";
     }
 
+    // Seems not needed
+    // refreshMaterialElement(){
+    //     componentHandler.upgradeElement(this.element[0]);
+    // }
+
 }
