@@ -74,3 +74,6 @@ console.log(dataService.errors);
 console.log(dataService.getCarByLicense("ABF202"));
 console.log(dataService.getCarsSorted());
 console.log(dataService.getCarsFilteredByModel("volvo"));
+
+
+// USING THE UI ELEMENTS
