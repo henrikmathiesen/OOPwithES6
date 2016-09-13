@@ -7,6 +7,7 @@ export default class BaseElement {
     }
 
     appendToElement(element) { 
+        this.createElement();
         element = $(element);
         element.append(this.element);
     }

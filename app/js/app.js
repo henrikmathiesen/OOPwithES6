@@ -4,6 +4,7 @@ import Car from './Car';
 import Drone from './Drone';
 import {fleet} from './services/fleetData';
 import FleetDataService from './services/FleetDataService';
+import ButtonElement from './ui/ButtonElement';
 
 
 let testClassCreation = new TestClassCreation("123", "Henry", "private info 1");
@@ -77,3 +78,6 @@ console.log(dataService.getCarsFilteredByModel("volvo"));
 
 
 // USING THE UI ELEMENTS
+
+let btn = new ButtonElement("Hello world!");
+btn.appendToElement('#oop-app');
