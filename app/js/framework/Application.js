@@ -1,7 +1,9 @@
 import ApplicationBase from './ApplicationBase';
 
-export default class Application  extends ApplicationBase {
+class Application  extends ApplicationBase {
     constructor() {
-        super();
+        super("Fleet Manager");
     }
 }
+
+export let application = new Application();
