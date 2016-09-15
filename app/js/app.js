@@ -6,6 +6,7 @@ import {fleet} from './services/fleetData';
 import FleetDataService from './services/FleetDataService';
 import ButtonElement from './ui/ButtonElement';
 import ImageElement from './ui/ImageElement';
+import TitleElement from './ui/TitleElement';
 
 
 let testClassCreation = new TestClassCreation("123", "Henry", "private info 1");
@@ -82,8 +83,11 @@ console.log(dataService.getCarsFilteredByModel("volvo"));
 
 const appElement = '#oo-app';
 
-let btn = new ButtonElement("Hello world!");
+let title = new TitleElement("Hello Title", ['oo-text-center']);
+title.appendToElement(appElement);
+
+let btn = new ButtonElement("Hello Button");
 btn.appendToElement(appElement);
 
-let img = new ImageElement('app/img/cat.jpg', 'oo-display-block');
+let img = new ImageElement('app/img/cat.jpg', ['oo-image', 'oo-display-block']);
 img.appendToElement(appElement); 

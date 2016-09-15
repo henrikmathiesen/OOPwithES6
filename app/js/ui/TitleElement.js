@@ -1,10 +1,10 @@
 import BaseElement from './BaseElement'
 
-export default class ImageElement extends BaseElement {
-    constructor(src, cssClasses){
+export default class TitleElement extends BaseElement {
+    constructor(title, cssClasses) {
         super();
         
-        this.src = src;
+        this.title = title;
         this.cssClasses = '';
 
         if (cssClasses.length) {
@@ -14,7 +14,7 @@ export default class ImageElement extends BaseElement {
 
     getElementString() {
         return `
-            <img src="${this.src}" class="${this.cssClasses}" />
+            <h2 class="${this.cssClasses}">${this.title}</h2>
         `;
     }
 }
