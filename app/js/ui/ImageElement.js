@@ -7,7 +7,7 @@ export default class ImageElement extends BaseElement {
         this.src = src;
         this.cssClasses = '';
 
-        if (cssClasses.length) {
+        if (cssClasses && cssClasses.length) {
             this.cssClasses += cssClasses.join(' ');
         }
     }

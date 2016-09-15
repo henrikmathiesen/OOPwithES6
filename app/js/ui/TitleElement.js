@@ -7,7 +7,7 @@ export default class TitleElement extends BaseElement {
         this.title = title;
         this.cssClasses = '';
 
-        if (cssClasses.length) {
+        if (cssClasses && cssClasses.length) {
             this.cssClasses += cssClasses.join(' ');
         }
     }
