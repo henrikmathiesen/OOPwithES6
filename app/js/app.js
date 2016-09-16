@@ -8,6 +8,8 @@ import ButtonElement from './ui/ButtonElement';
 import ImageElement from './ui/ImageElement';
 import TitleElement from './ui/TitleElement';
 
+import { application } from './framework/Application';
+
 
 let testClassCreation = new TestClassCreation("123", "Henry", "private info 1");
 
@@ -82,6 +84,7 @@ console.log(dataService.getCarsFilteredByModel("volvo"));
 // USING THE UI ELEMENTS
 
 const appElement = '#oo-app';
+const appRoutes = '#oo-app-routes';
 
 let title = new TitleElement("Hello Title", ['oo-text-center']);
 title.appendToElement(appElement);
@@ -90,4 +93,9 @@ let btn = new ButtonElement("Hello Button");
 btn.appendToElement(appElement);
 
 let img = new ImageElement('app/img/cat.jpg', ['oo-image', 'oo-display-block']);
-img.appendToElement(appElement); 
+img.appendToElement(appElement);
+
+
+// BUILDING AN APP WITH ROUTES
+
+application.titleBar.appendToElement(appRoutes);
