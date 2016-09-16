@@ -97,5 +97,4 @@ img.appendToElement(appElement);
 
 
 // BUILDING AN APP WITH ROUTES
-
-application.titleBar.appendToElement(appRoutes);
+application.show(appRoutes);
