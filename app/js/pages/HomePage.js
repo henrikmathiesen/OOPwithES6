@@ -1,10 +1,10 @@
-import BaseElement from '../ui/BaseElement';
 import ImageElement from '../ui/ImageElement';
+import Page from './Page';
 
 
-export default class HomePage extends BaseElement {
+export default class HomePage extends Page {
     constructor() {
-        super();
+        super("Home Page");
     }
 
     createElement() {

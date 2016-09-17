@@ -10,7 +10,7 @@ export default class ApplicationBase {
     }
 
     addRoute(id, pageObject, defaultRoute = false){
-        this.titleBar.addLink(id, '');
+        this.titleBar.addLink(id, '/#' + id);
         this.routeMap[id] = pageObject;
 
         if(defaultRoute) {
@@ -27,6 +27,11 @@ export default class ApplicationBase {
 
     show(element) {
         this.titleBar.appendToElement(element);
+
+        this.titleBar.element.find('a').on('click', (event) => {
+            let route = event.target.innerHTML;
+            this.activateRoute(route);
+        });
 
         if(this.defaultRoute) {
             this.activateRoute(this.defaultRoute);
