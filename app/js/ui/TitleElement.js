@@ -32,6 +32,7 @@ export default class TitleElement extends BaseElement {
                     ${links}
                 </ul>
             </div>
+            <div id="page-content"></div>
         `;
     }
 }

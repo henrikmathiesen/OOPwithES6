@@ -6,10 +6,10 @@ export default class BaseElement {
         this.element = null; // jQuery object
     }
 
-    appendToElement(element) { 
+    appendToElement(elementToAppendTo) { 
         this.createElement();
-        element = $(element);
-        element.append(this.element);
+        elementToAppendTo = $(elementToAppendTo);
+        elementToAppendTo.append(this.element);
     }
 
     createElement() {

@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import TitleElement from '../ui/TitleElement';
 
 export default class ApplicationBase {
@@ -17,7 +18,18 @@ export default class ApplicationBase {
         }
     }
 
+    activateRoute(route){
+        let content = $('#page-content');
+        content.empty();
+
+        this.routeMap[route].appendToElement(content);
+    }
+
     show(element) {
         this.titleBar.appendToElement(element);
+
+        if(this.defaultRoute) {
+            this.activateRoute(this.defaultRoute);
+        }
     }
 }

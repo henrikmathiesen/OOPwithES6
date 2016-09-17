@@ -86,9 +86,6 @@ console.log(dataService.getCarsFilteredByModel("volvo"));
 const appElement = '#oo-app';
 const appRoutes = '#oo-app-routes';
 
-let title = new TitleElement("Hello Title", ['oo-text-center']);
-title.appendToElement(appElement);
-
 let btn = new ButtonElement("Hello Button");
 btn.appendToElement(appElement);
 
