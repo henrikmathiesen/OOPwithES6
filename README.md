@@ -1,4 +1,4 @@
-# OOPwithES6
+# OOP With ES6
 Object-oriented Programming in JavaScript - ES6
 
 Following along Pluralsight course:
