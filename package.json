@@ -4,11 +4,11 @@
   "description": "Object-oriented Programming in JavaScript - ES6",
   "main": "index.js",
   "scripts": {
+    "postinstall": "mkdir bld",
     "start": "npm run dev && concurrently \"npm run eslint-watch\" \"npm run watchify-babel-sourcemap\" \"npm run watch-less-sourcemap-css-autoprefix\" \"npm run serve\"",
     "dev": "npm run eslint && npm run browserify-babel-sourcemap && npm run less-sourcemap-css-autoprefix",
     "bld": "npm run eslint && npm run browserify-babel-no-sourcemap && npm run uglifyjs && npm run less-no-sourcemap-css-autoprefix-minify",
     "dev-es5": "browserify app/js/es5-modules/app.js -d -o bld/bundle-es5.js",
-    "": "_______________________________________________________________________________________________________________________________________________",
     "serve": "http-server -p 1337",
     "browserify-babel-sourcemap": "browserify app/js/app.js -t babelify -d -o bld/bundle.js",
     "watchify-babel-sourcemap": "watchify app/js/app.js -t babelify -d -o bld/bundle.js",
@@ -60,22 +60,22 @@
   },
   "homepage": "https://github.com/henrikmathiesen/oop-with-es6#readme",
   "devDependencies": {
-    "autoprefixer": "^6.4.0",
-    "babel-preset-es2015": "^6.13.2",
-    "babelify": "^7.3.0",
-    "browserify": "^13.1.0",
-    "concurrently": "^2.2.0",
-    "eslint": "^3.3.1",
-    "http-server": "^0.9.0",
-    "less": "^2.7.1",
-    "less-plugin-clean-css": "^1.5.1",
-    "onchange": "^2.5.0",
-    "postcss-cli": "^2.5.2",
-    "uglify-js": "^2.7.0",
-    "watchify": "^3.7.0"
+    "autoprefixer": "6.4.0",
+    "babel-preset-es2015": "6.13.2",
+    "babelify": "7.3.0",
+    "browserify": "13.1.0",
+    "concurrently": "2.2.0",
+    "eslint": "3.3.1",
+    "http-server": "0.9.0",
+    "less": "2.7.1",
+    "less-plugin-clean-css": "1.5.1",
+    "onchange": "2.5.0",
+    "postcss-cli": "2.5.2",
+    "uglify-js": "2.7.0",
+    "watchify": "3.7.0"
   },
   "dependencies": {
-    "jquery": "^3.1.0",
-    "normalize.less": "^1.0.0"
+    "jquery": "3.1.0",
+    "normalize.less": "1.0.0"
   }
 }
